@@ -158,18 +158,19 @@
 										<li><input type="submit" value="Send" class="special" /></li>
 									</ul>
 								</form-->
-								<form method="GET" action="mailto:test@example.com" enctype="text/plain">
+								<form method="GET" action="mailto:nikunj101@gmail.com" enctype="text/plain">
     									<div>Subject</div>
     									<input type="text" name="subject" />
 
-    									<div>Name</div>
-    									<input name="Name" />
-
-    									<div>E-Mail</div>
-    									<input name="E-Mail Address" />
-
-    									<div>Message</div>
-    									<textarea name="Message"></textarea>
+    									<div class="field half first">
+										<input type="text" name="name" id="name" placeholder="Name" />
+									</div>
+									<div class="field half">
+										<input type="email" name="email" id="email" placeholder="Email" />
+									</div>
+									<div class="field">
+										<textarea name="message" id="message" placeholder="Message"></textarea>
+									</div>
 
     									<br/>
     									<input type="submit" value="Send" />
