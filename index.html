@@ -44,7 +44,7 @@
 							<li><a href="index.html">Home</a></li>
 							<!--<li><a href="generic.html">About</a></li>
 							<li><a href="generic.html">Projects</a></li>-->
-							<li><a href="generic.html">Coursework</a></li>
+							<li><a href="coursework.html">Coursework</a></li>
 							<!--<li><a href="generic.html">Blog</a></li>
 							<li><a href="elements.html">Elements</a></li>-->
 						</ul>
@@ -58,6 +58,17 @@
 								<p>I'm a 3rd year undergraduate student at Boston University studying Mechanical Engineering</p>
 							</header>
 							<section class="tiles">
+								<!--article class="style3">
+									<span class="image">
+										<img src="images/pic08.jpg" alt="" />
+									</span>
+									<a href="generic.html">
+										<h2>Cold Walled Deposition Furnace</h2>
+										<div class="content">
+											<p>Cold walled reactor for precise growth of 2d metamaterials and other nanostructures</p>
+										</div>
+									</a>
+								</article>
 								<article class="style1">
 									<span class="image">
 										<img src="Content/Pictures/Rocketry/Iron Lotus/Iron Lotus Bottom.PNG" alt="" />
@@ -68,7 +79,7 @@
 											<p>First iteration of BURPG's ignition test platform.</p>
 										</div>
 									</a>
-								</article>
+								</article-->
 								<article class="style2">
 									<span class="image">
 										<img src="Content/Pictures/3d scanner.png" alt="" />
@@ -124,28 +135,6 @@
 										</div>
 									</a>
 								</article>
-								<article class="style2">
-									<span class="image">
-										<img src="images/pic07.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Nanotube Deposition System</h2>
-										<div class="content">
-											<p>Conceptual design for growth of ultralong carbon nanotubes</p>
-										</div>
-									</a>
-								</article>
-								<article class="style3">
-									<span class="image">
-										<img src="images/pic08.jpg" alt="" />
-									</span>
-									<a href="generic.html">
-										<h2>Cold Walled Deposition Furnace</h2>
-										<div class="content">
-											<p>Cold walled reactor for precise growth of 2d metamaterials and other nanostructures</p>
-										</div>
-									</a>
-								</article>
 							</section>
 						</div>
 					</div>
@@ -155,7 +144,7 @@
 						<div class="inner">
 							<section>
 								<h2>Get in touch</h2>
-								<form method="post" action="#">
+								<!--form method="post" action="#">
 									<div class="field half first">
 										<input type="text" name="name" id="name" placeholder="Name" />
 									</div>
@@ -168,23 +157,74 @@
 									<ul class="actions">
 										<li><input type="submit" value="Send" class="special" /></li>
 									</ul>
+								</form-->
+								<form method="GET" action="mailto:test@example.com" enctype="text/plain">
+    									<div>Subject</div>
+    									<input type="text" name="subject" />
+
+    									<div>Name</div>
+    									<input name="Name" />
+
+    									<div>E-Mail</div>
+    									<input name="E-Mail Address" />
+
+    									<div>Message</div>
+    									<textarea name="Message"></textarea>
+
+    									<br/>
+    									<input type="submit" value="Send" />
+
+    									<input type="hidden" name="body" />
 								</form>
+
+								<script>
+								{
+  									var form = document.getElementsByTagName('form')[0];
+									form.addEventListener('submit',contact,false);
+   									function contact(e) 
+									{
+    										// Prevent Default Form Submission
+    										e.preventDefault();
+
+      										var target = e.target || e.srcElement;
+      										var i = 0;
+      										var message = '';
+
+      										// Loop Through All Input Fields
+      										for(i = 0; i < target.length; ++i) 
+										{
+         								   	   // Check to make sure it's a value. Don't need to include Buttons
+         								   	   if(target[i].type != 'text' && target[i].type != 'textarea') {
+                							   	   // Skip to next input since this one doesn't match our rules
+           								   	   continue;
+         									}
+
+         									// Add Input Name and value followed by a line break
+         									message += target[i].name + ': ' + target[i].value + "\r\n";
+      									}
+     									// Modify the hidden body input field that is required for the mailto: scheme
+      									target.elements["body"].value = message;
+
+      									// Submit the form since we previously stopped it. May cause recursive loop in some browsers? Should research this.
+      									this.submit();
+   								}
+								</script>
 							</section>
 							<section>
 								<h2>Follow</h2>
 								<ul class="icons">
-									<li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
+									<!--li><a href="#" class="icon style2 fa-twitter"><span class="label">Twitter</span></a></li>
 									<li><a href="#" class="icon style2 fa-facebook"><span class="label">Facebook</span></a></li>
 									<li><a href="#" class="icon style2 fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li>
+									<li><a href="#" class="icon style2 fa-dribbble"><span class="label">Dribbble</span></a></li-->
 									<li><a href="#" class="icon style2 fa-github"><span class="label">GitHub</span></a></li>
-									<li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
-									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li>
+									<!--li><a href="#" class="icon style2 fa-500px"><span class="label">500px</span></a></li>
+									<li><a href="#" class="icon style2 fa-phone"><span class="label">Phone</span></a></li-->
 									<li><a href="#" class="icon style2 fa-envelope-o"><span class="label">Email</span></a></li>
 								</ul>
 							</section>
 							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+								<li>&copy; Nikunj Khetan. All rights reserved</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 							</ul>
 						</div>
 					</footer>
