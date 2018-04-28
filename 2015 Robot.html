@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Aft Structure - Thrust Manifold</title>
+		<title>2015 Robot</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -24,7 +24,7 @@
 
 							<!-- Logo -->
 								<a href="index.html" class="logo">
-									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Phantom</span>
+									<span class="symbol"><img src="images/logo.svg" alt="" /></span><span class="title">Nikunj Khetan</span>
 								</a>
 
 							<!-- Nav -->
@@ -53,27 +53,32 @@
 				<!-- Main -->
 					<div id="main">
 						<div class="inner">
-							<h1>Aft Structure - Thrust Manifold</h1>
-							<span class="image main"><img src="nikunjkhetan.github.io/Content/Pictures/Rocketry/Thrust Manifold/Thrust Manifold Section View.png" alt="" /></span>
-							<p>At Boston University, I joined BURPG, a college rocket team with the goal of sending a custom-built rocket to space. Our rocket, dubbed Starscraper, is a 30 foot long, liquid propelled, thrust vector controlled beast which is aiming to hit 400,000 feet by summer 2017. It’s powered by two liquid fuel based engines which provide a combined 3000 lbs of thrust. </p>
-							<p>In order for the rocket to maintain a stable heading, the thrust produced by its engines needs to be directed at an angle to the rocket’s axis in order to correct for any deviations from the rocket’s flight path. There are two methods by which this could happen, Liquid Injection Thrust Vector Control (LITVC) or Gimbaling. In LITVC, fuel is injected into the engine or combustion chamber at different angles to produce variations in the direction that the thrust leaves the engine. In a gimbaled approach, the entire engine is rotated about the rocket’s axis in any direction to change the direction of the thrust. We chose the gimbaling method to solve this problem. One of the drawbacks of gimbaling is that the plumbing or the tubing system that delivers the fuel and the oxidizer to the engine becomes very intricate. To simplify and better integrate this plumbing, I designed a custom made thrust manifold that combined several functions in the engine section into a single assembly simplifying the plumbing significantly.The Thrust Manifold internally split a single oxidizer (OX) feed line into two separate channels that delivered OX flow to each engine.</p>
-							<h3>Design Requirements</h3>
-							<ul>
-								<li>Flow</li>
-								<ul>
-									<li>Minimal interruption to flow of OX from MOX feed to OX dome</li>
-									<li>OX channel should maintain ¾” diameter</li>
-								</ul>
-								<li>Dimensions</li>
-								<ul>
-									<li>Should match engine profile</li>
-									<li>Thickness of overall manifold <= 1.5”</li>
-								</ul>
-								<li>Mounting</li>
-								<ul>
-									<li>Should be able to mount ring joint yokes as well as attach to ox-dome</li>
-								</ul>
-							</ul>
+							<h1>2015 Robot</h1>
+							<section>
+								<span class="image main"><img src="nikunjkhetan.github.io/Content/Pictures/Robotics/Arms.png" alt="" /></span>
+								<p>The 2015 <a href = "https://www.firstinspires.org/robotics/frc">FIRST Robotics Competition</a> (FRC) game involved stacking totes and placing them on platforms. One of the critical strategic components of the 2015 <a href = "https://www.youtube.com/watch?v=W6UYFKNGHJ8">game</a> was capturing recycling bins off a center divider. I lead the team that designed and implemented robotic arms to grab the cans early in the match.</p>
+							</section>
+							<h2>Choosing a collection method</h2>
+							<section>
+								<p>Once we came to the strategic assessment that acquiring the containers in the center of the field was vital to a winning strategy, we had to decide between a few options on how to do it. We had a few design requirements in mind when selecting a can burglar design</p>
+								<ol>
+									<li>They had to have a speed greater than potential contenders on the other alliance</li>
+									<li>They had to securely grab the containers</li>
+									<li>They had to fit in a very small weight allowance (~3lbs)</li>
+									<li>They had to be usable in both the autonomous period as well as the tele-operated period</li>
+									<li>They had to overcome the obstruction of the landfill in either period</li>
+								</ol>
+								<p>The conceptual designs we considered were:</p>
+								<ol>
+									<li>A dual wedge/funnel that could be used to funnel the containers off the platform in the center of the field while pushing the landfill out of the way making space for the robot to drive forward.</li>
+									<li>A two part arm with a tensionable hoop at the end which would bend outwards by means of pneumatics and secure the hoop around the midsection of the container by tensioning a rope around the hoop effectively grabbing the container.</li>
+									<li>A 3-part telescoping extender pole with a pneumatically controlled hook which securely grabbed onto the opening at the top of the recycling can by clamping and hooking onto the can at three separate points.</li>
+									<span class="image fit"><img src="nikunjkhetan.github.io/Content/Pictures/Robotics/geometrysketch1.png" alt="" /></span>
+									<li>A two part, lightweight telescoping arm which was mounted at the base of the robot frame and grabbed the containers with a simple hook with ridges on its tip to increase its hold on the container.</li>
+								</ol>
+								<p>Option 1 satisfied requirements 4 and 5 but were determined to be slower than other options. It was reasoned that if other options we had were faster, other teams would be able to create a faster system. Option two satisfied requirements 2, 4, 5 and depending on how it was implemented, possibly requirement one. However, due to the complexity of such a mechanism, its potential weight was deemed to exceed the weight limit. Option three had the same issue. While the initial design seemed to be quite effective in theory, it was estimated to weigh around 15 lbs for two arms. Option four was seen as the best way to satisfy all five design requirements.</p>
+							</section>
+							
 						</div>
 					</div>
 
