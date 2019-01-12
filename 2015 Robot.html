@@ -78,7 +78,28 @@
 								</ol>
 								<p>Option 1 satisfied requirements 4 and 5 but were determined to be slower than other options. It was reasoned that if other options we had were faster, other teams would be able to create a faster system. Option two satisfied requirements 2, 4, 5 and depending on how it was implemented, possibly requirement one. However, due to the complexity of such a mechanism, its potential weight was deemed to exceed the weight limit. Option three had the same issue. While the initial design seemed to be quite effective in theory, it was estimated to weigh around 15 lbs for two arms. Option four was seen as the best way to satisfy all five design requirements.</p>
 							</section>
-							
+							<h2>Designing a hook</h2>
+							<section>
+								<p>In designing a hook we sought to create a secure gripping method as well as address the issue of being able to use the grabber mechanism anytime during the match. We had three proposed hook designs to accomplish this as follows:</p>
+								<ol>
+									<li>A spring loaded hook that grabbed the container at its handle</li>
+									<span class = "image fit"><img src="nikunjkhetan.github.io/Content/Pictures/Robotics/geometrysketchhook.png" alt="" /></span>
+									<li>A spring loaded hook that could swivel in two directions allowing the container to be approached from any side which would hook onto the litter opening at the top and then pneumatically clamp down to secure its hold</li>
+									<span class = "image fit"><img src="nikunjkhetan.github.io/Content/Pictures/Robotics/hook.png" alt="" /></span>
+									<li>A simple hook with ridges to hook onto the opening at the top which would rely on the speed of the arm and the robot driving to secure the container</li>
+								</ol>
+							</section>
+							<h2>Designing the arm</h2>
+							<section>
+								<p>When designing the arm, several issues and factors had to be considered:</p>
+								<ol>
+									<li>Deployment speed</li>
+									<li>Strength and flexibility to resist torsional forces from pulling a heavy container over a long length and insulate the frame itself from any warping</li>
+									<li>Telescoping the arm to reach the necessary length</li>
+									<li>Weight</li>
+								</ol>
+								<p>Solving the weight issue proved to be key to addressing the other issues. For example, we originally telescoped the arm towards the containers by using a second pneumatic cylinder. However, by relying on a tensioned rope to pull the arm out into a telescoped position as the arm deployed enabled us to get rid of the second pneumatic cylinder on each arm saving approximately 1-2 lbs. Reducing the weight also affected the deployment speed. By having a smaller mass with the same bore cylinder, we were able to impart a greater impulse on the arm, thereby increasing the speed with which it moved towards the container.</p>
+							</section>
 						</div>
 					</div>
 
