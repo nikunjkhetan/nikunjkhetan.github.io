@@ -63,6 +63,44 @@
 							<span class="image main"><img src="Content/Pictures/SabreTubeDiagram.png" alt="" /></span>
 							<span class="image main"><img src="Content/Pictures/SabreTubeTempCurve.png" alt="" /></span>
 							<h2>Thermal Model</h2>
+							<div class="row">
+								<div class="6u 12u$(medium)">
+									<h3>Core Assumptions</h3>
+									<p>To model the heat transfer to and from the silicon wafer, the system was modelled as a one-dimensional system of partial differential equations based on the transient heat equation into and out of half of the system. Figure 3 depicts the simplified system in a block diagram, noting what types of heat transfer exist in the system. The following are also the core assumptions behind the model drawn from the supporting literature.</p>
+									<ul>
+										<li>The platform temperature is constant across its cross sectional area</li>
+										<li>The system mimics an energy generating insulated tip fin and is symmetrical about the center</li>
+										<li>The steel electrodes have zero electrical resistivity.</li>
+										<li>There is constant thermal resistance between the steel electrodes and the silicon platform.</li>
+										<li>Convection maintains a constant ambient temperature</li>
+										<li>The electrical resistivity of silicon is approximated by the bulk value for thermal equilibrium, meaning that thermoelectric effects like the Thomson effect are neglected, and the electric field does not create excess carriers.</li>
+										<li>Appropriate temperature-dependent physical properties for silicon and steel are as supplied by the literature.</li>
+									</ul>
+									<h3>Governing Equation Terms</h3>
+									<ul>
+										<li>Heat capacity: the change in temperature</li>
+										<li>Diffusion (conduction term)</li>
+										<li>Heat dissipation due to resistive heating source (energy generation)</li>
+										<li>Heat loss to surroundings (convection and radiation)</li>
+									</ul>
+									<h3>Boundary Conditions</h3>
+									<ul>
+										<li>Heat transfer flowing out of steel block through contact between steel block and silicon wafer, modeled as a heat resistor, equals heat flowing into wafer</li>
+										<li>Heat generation in silicon wafer is given by equation 3</li>
+										<li>At x = 0, the heat transfer out of the steel block is modelled by convection and radiation</li>
+										<li>Heat transfer through the middle of the silicon wafer is zero due to symmetry</li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(medium)">
+									<span class="image main"><img src="Content/Pictures/ThermalModelDiagram.png" alt="" /></span>
+									<span class="image main"><img src="Content/Pictures/ThermalModelEquations2.PNG" alt="" /></span>
+									<span class="image main"><img src="Content/Pictures/ThermalModelEquations3.PNG" alt="" /></span>
+									<span class="image main"><img src="Content/Pictures/ThermalModelEquations4.PNG" alt="" /></span>
+									<span class="image main"><img src="Content/Pictures/ThermalModelPDEs.PNG" alt="" /></span>
+									<span class="image main"><img src="Content/Pictures/ThermalModelTimeConstant.PNG" alt="" /></span>
+								</div>
+							</div>
+							<h2>Results</h2>
 							
 						</div>
 					</div>
