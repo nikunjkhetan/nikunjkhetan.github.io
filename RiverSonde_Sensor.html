@@ -118,9 +118,31 @@
 								</table>
 							</div>             
 							<h2>Chlorophyll Sensor</h2>  
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel venenatis mauris vehicula hendrerit.</p>
+							<p>Our approach to designing the core sensor suite in RiverSonde is split into three parts. COTS sensors like thermocouples, humidity gauges (for leak detection inside the shell), pressure transducers and more are easily integrated and comprise the first part. Second, taking chlorophyll-a measurements can yield broad and potentially indicative information about algal blooms and biomass concentrations at given points in the river. Leeuw et. al. demonstrated a cheap DIY chlorophyll-a sensor which excites chlorophyll with a blue LED and measures the intensity of the emitted light to calculate a chlorophyll concentration near the surface of the sensor. We integrated this approach into the hull of our platform. Finally, for the third portion, we considered the remaining metrics the DCR and CRWA asked us to attempt to measure.</p>
 							<h2>DIY Cytometer</h2>
-							<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Pellentesque venenatis dolor imperdiet dolor mattis sagittis. Praesent rutrum sem diam, vitae egestas enim auctor sit amet. Pellentesque leo mauris, consectetur id ipsum sit amet, fersapien risus, commodo eget turpis at, elementum convallis elit. Pellentesque enim turpis, hendrerit tristique lorem ipsum dolor.</p>
+							<p>With one measurement out of chlorophyll and phycocyanin successful, the next consideration was if it was possible to directly evaluate either HAB toxins or bacterial species. Since toxins were smaller and more chemically challenging to evaluate given our constraints, we focused on considering approaches to bacterial or algal species. A key capability of our approach needed to be a capacity to take in situ measurements of our target molecules. Flow cytometry is one approach that has been implemented on a DIY scale that could fit our needs and take in situ measurements.</p>
+							<p>Benchtop approaches to flow cytometry typically cost several thousand dollars and are not useful for taking remote in situ measurements and process samples at a slow rate. A team at UCLA demonstrated a 2500 dollar DIY cytometer that had a relatively high throughput (100 mL/hr). While that’s an order of magnitude cheaper than traditional cytometers, it was still above our budget. Also, the cytometer relied on computer vision on captured images to identify target organisms. Traditional computer vision is computationally expensive and consumes large amounts of power, well beyond our platform's rated capacity.</p>
+							<p>In order to address the computation and power consumption issues, we turned to a subsampling technique called single pixel imaging. Subsampling techniques work by taking a fraction of a potentially available dataset and either reconstructing the remaining dataset from the small sample or acting on the fractional sample to perform a task. Single pixel imaging is a technique where an image is captured by a single pixel over a (relatively) long period of exposure. With a single pixel camera, a small fraction of the relevant pixels can be captured until enough information is available to identify the target organisms in the field of view. This drastically cuts the amount of information needed to be processed, bringing the processing and power requirements in line with what could be supported by RiverSonde. We currently are building and testing a benchtop version of this hybrid flow cytometer/single pixel camera to measure the microcystin and potentially E. Coli requested by our clients. Additionally, such a setup is also modular enough to be adapted to other organisms based on the ecosystem specifics.</p>
+							<h3>Design considerations</h3>
+							<p>Under construction</p>
+							<div class="row">
+								<div class="4u 12u$(medium)">
+									<h3>Channel Design</h3>
+									<p>Under construction</p>
+								</div>
+								<div class="4u 12u$(medium)">
+									<h3>Pump Design</h3>
+									<p>Under construction</p>
+								</div>
+								<div class="4u 12u$(medium)">
+									<h3>Optics Design</h3>
+									<p>Under construction</p>
+								</div>
+							</div>
+							<h3>Algorithmic Layout</h3>
+							<p>Under construction</p>
+							<h2>Selected References</h2>
+							<p>Under construction</p>
 						</div>
 					</div>
 
