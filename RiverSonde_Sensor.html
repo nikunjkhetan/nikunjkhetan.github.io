@@ -123,26 +123,37 @@
 							<p>With one measurement out of chlorophyll and phycocyanin successful, the next consideration was if it was possible to directly evaluate either HAB toxins or bacterial species. Since toxins were smaller and more chemically challenging to evaluate given our constraints, we focused on considering approaches to bacterial or algal species. A key capability of our approach needed to be a capacity to take in situ measurements of our target molecules. Flow cytometry is one approach that has been implemented on a DIY scale that could fit our needs and take in situ measurements.</p>
 							<p>Benchtop approaches to flow cytometry typically cost several thousand dollars and are not useful for taking remote in situ measurements and process samples at a slow rate. A team at UCLA demonstrated a 2500 dollar DIY cytometer that had a relatively high throughput (100 mL/hr). While that’s an order of magnitude cheaper than traditional cytometers, it was still above our budget. Also, the cytometer relied on computer vision on captured images to identify target organisms. Traditional computer vision is computationally expensive and consumes large amounts of power, well beyond our platform's rated capacity.</p>
 							<p>In order to address the computation and power consumption issues, we turned to a subsampling technique called single pixel imaging. Subsampling techniques work by taking a fraction of a potentially available dataset and either reconstructing the remaining dataset from the small sample or acting on the fractional sample to perform a task. Single pixel imaging is a technique where an image is captured by a single pixel over a (relatively) long period of exposure. With a single pixel camera, a small fraction of the relevant pixels can be captured until enough information is available to identify the target organisms in the field of view. This drastically cuts the amount of information needed to be processed, bringing the processing and power requirements in line with what could be supported by RiverSonde. We currently are building and testing a benchtop version of this hybrid flow cytometer/single pixel camera to measure the microcystin and potentially E. Coli requested by our clients. Additionally, such a setup is also modular enough to be adapted to other organisms based on the ecosystem specifics.</p>
-							<h3>Design considerations</h3>
-							<p>Under construction</p>
+							<!--h3>Design considerations</h3>
+							<p>Under construction</p-->
 							<div class="row">
 								<div class="4u 12u$(medium)">
 									<h3>Channel Design</h3>
-									<p>Under construction</p>
+									<p>The first driving component in the cytometer design is the microfluidic channel. The channel dimensions directly relate to the volumetric flow rate of the channel and the velocity of the fluid inside the channel. The channel dimensions are co-dependent on the additive manufacturing constraints, the sampling rate of the sensor and a mechanically feasible flow rate determined by the limitations of the pump. The channel design should take these variables and factors into account and seek to minimize the distance travelled between each sample.</p>
 								</div>
 								<div class="4u 12u$(medium)">
 									<h3>Pump Design</h3>
-									<p>Under construction</p>
+									<span class="image main"><img src="Content/Pictures/RiverSonde/OpenSourceSyringePump.jpg" alt="" /></span>
+									<p>A custom benchtop syringe pump was used to generate the pressure differential through the microfluidic channel. The above image is an example of a pump assembled using printed and COTS components. This approach could concievably be integrated into the 3D printed structure of the Sonde which is why it was used for the benchtop demonstration assembly. <a href="https://www.appropedia.org/Open-source_syringe_pump">Source for original design</a></p>
 								</div>
 								<div class="4u 12u$(medium)">
 									<h3>Optics Design</h3>
-									<p>Under construction</p>
+									<p>A <a href="https://en.wikipedia.org/wiki/Digital_micromirror_device">Digital Micromirror Device</a> (DMD) was used to construct a single pixel camera for the imaging sensor. A single pixel camera has several advantages in this application over a traditional CMOS or CCD chip:</p>
+									<ul>
+										<li>More effective for sub-sampling approaches. Sub-sampling, or <a href="https://en.wikipedia.org/wiki/Undersampling">undersampling</a>, is a signal processing technique where a fraction of the available signal is processed to either reconstruct or act upon the original signal. This saves significant computational resources in computer vision.</li>
+										<li>Can easily select for and focus on regions of interest by turning on mirrors corresponding to field of view.</li>
+										<li>Better suited for Super Resolution (SR) imaging where an image is developed via longer exposure that resolves smaller than the size of the pixels (mirrors in this case)</li>
+									</ul>
+									<p>Under Construction</p>
 								</div>
 							</div>
 							<h3>Algorithmic Layout</h3>
-							<p>Under construction</p>
+							<p>Project still in progress, check back for further updates.</p>
 							<h2>Selected References</h2>
-							<p>Under construction</p>
+							<ol>
+								<li>Zhao, Y., Chen, Q., Sui, X., & Gao, H. (2017). Super Resolution Imaging Based on a Dynamic Single Pixel Camera. IEEE Photonics Journal, 9(2), 1–11. <a href="https://doi.org/10.1109/JPHOT.2017.2688351">https://doi.org/10.1109/JPHOT.2017.2688351</a></li>
+								<li>Gӧrӧcs, Z., Tamamitsu, M., Bianco, V., Wolf, P., Roy, S., Shindo, K., … Ozcan, A. (2018). A deep learning-enabled portable imaging flow cytometer for cost-effective, high-throughput, and label-free analysis of natural water samples. Light: Science & Applications, 7(1), 66. <a href="https://doi.org/10.1038/s41377-018-0067-0">https://doi.org/10.1038/s41377-018-0067-0</a></li>
+								<li>Phillips, D. B., Sun, M.-J., Taylor, J. M., Edgar, M. P., Barnett, S. M., Gibson, G. G., & Padgett, M. J. (2016). Adaptive foveated single-pixel imaging with dynamic super-sampling. ArXiv:1607.08236 [Physics]. Retrieved from <a href="http://arxiv.org/abs/1607.08236">http://arxiv.org/abs/1607.08236</a></li>
+							</ol>
 						</div>
 					</div>
 
